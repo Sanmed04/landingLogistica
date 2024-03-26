@@ -1,0 +1,16 @@
+---
+import JSON from "../../public/JSON.json";
+import Icons from "./Icons.astro";
+---
+
+<div class="flex gap-40 mx-auto my-auto">
+  {
+    JSON.iconsServicios.map((icon, index) => (
+      <Icons
+        key={index}
+        path={icon.path}
+        descripcion={icon.descripcion}
+      />
+    ))
+  }
+</div>

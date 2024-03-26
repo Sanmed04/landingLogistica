@@ -1,0 +1,14 @@
+---
+const { path, viewbox, href } = Astro.props;
+---
+
+<a class="h-fit w-10 p-0.5 bg-white rounded-full hover:bg-gray-300" target="_blank" href={href}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    x="0px"
+    y="0px"
+    viewBox={viewbox}
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d={path}> </path>
+  </svg>
+</a>

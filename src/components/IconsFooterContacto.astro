@@ -1,0 +1,22 @@
+---
+const { path, text, viewbox } = Astro.props;
+---
+
+<div class="flex gap-2 items-center">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    x="0px"
+    y="0px"
+    fill="none"
+    stroke-width="0"
+    viewBox={viewbox}
+    height="28"
+    width="28"
+    class="p-0.5 bg-white rounded-full fill-current"
+  >
+    <path fill-rule="evenodd" d={path}> </path>
+  </svg>
+  <p class="text-white">
+    {text}
+  </p>
+</div>

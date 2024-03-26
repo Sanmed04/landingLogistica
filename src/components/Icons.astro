@@ -1,0 +1,25 @@
+---
+const { path, descripcion } = Astro.props;
+---
+
+<div class="flex grid-cols-4 w-64 h-fit">
+  <div>
+    <div class="w-[80px] h-[80px] bg-white drop-shadow-xl rounded-full p-2 mx-auto">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d={path}> </path>
+      </svg>
+    </div>
+    
+    <div class="flex-wrap w-64 text-center pt-4 select-none">
+      <p>
+        {descripcion ? descripcion : ""}
+      </p>
+    </div>
+  </div>
+</div>

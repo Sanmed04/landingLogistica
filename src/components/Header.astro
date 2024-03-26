@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import logotipo from "../../public/images/camionPNGIcon2.png";
+---
+
+<header
+  class="bg-slate-900 w-screen h-24 flex justify-center sticky top-0 z-50"
+>
+  <nav
+    class="flex justify-evenly items-center h-full text-white text-lg container select-none"
+  >
+    <div class="w-1/3 flex justify-start">
+      <a href="#main" class="bg-white rounded">
+        <Image src={logotipo} alt="logo" class="h-20 w-auto" />
+      </a>
+    </div>
+    <div class="w-1/3">
+      <ul class="flex justify-between">
+        <li class="w-24">
+          <a href="#main" class="hoverEffectNav inline-block">Inicio</a>
+        </li>
+        <li class="w-24">
+          <a href="#servicios" class="hoverEffectNav inline-block">Servicios</a>
+        </li>
+        <li class="w-24 text-center">
+          <a href="#calidad" class="hoverEffectNav inline-block">Calidad</a>
+        </li>
+        <li class="w-24 text-end">
+          <a href="#conocenos" class="hoverEffectNav inline-block">Conócenos</a>
+        </li>
+      </ul>
+    </div>
+    <div class="w-1/3 flex justify-end">
+      <a
+        href="#contacto"
+        class="hover:bg-blue-700 rounded px-4 py-2 bg-blue-800">Contacto</a
+      >
+    </div>
+  </nav>
+</header>
+
+<style>
+  .hoverEffectNav:after {
+    display: block;
+    content: "";
+    width: 100%;
+    border-bottom: solid 3px white;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  .hoverEffectNav:hover:after {
+    transform: scaleX(1);
+  }
+
+  .hoverEffectNav:after {
+    transform-origin: left;
+  }
+</style>

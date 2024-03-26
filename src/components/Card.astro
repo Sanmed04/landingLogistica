@@ -1,0 +1,18 @@
+---
+const { image, title, text, alt } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="bg-slate-100 m-2 h-fit w-[400px] rounded-lg drop-shadow-xl">
+  <div class="overflow-hidden rounded-t-lg img">
+    <Image src={image} alt={alt} height="400" width="400" class="hover:scale-125 ease-in-out duration-200" />
+  </div>
+  <div class="p-2 px-4 select-none">
+    <h1 class="py-2 font-bold">
+      {title}
+    </h1>
+    <p class="flex-wrap h-28"  id="calidad">
+      {text}
+    </p>
+  </div>
+</div>
